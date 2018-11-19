@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace WheelTest
 {
     // wheel of fourtune 
-    // this is done
-  // does
+
     class Program
     {
         static void Main(string[] args)
@@ -23,16 +22,15 @@ namespace WheelTest
             for (int i = 0; i < array.Length; i++)
             {
                 if (array[i] != c )
-                    {
+                {
                         if (Char.IsLetter(userIn[i]) == false)
                         {
                             userIn[i] = '-';
                         }
-                    }
+                }
                     else
                     {
                         userIn[i] = c;
-
                     }
                 }
             result = new string (userIn);
@@ -40,10 +38,20 @@ namespace WheelTest
             Console.ReadLine();
             return result;
         }
-        public static string Wheel(string s,string result)
+        public static void Wheel(string s)
         {
-
-            return s;
+            string WordTobeGuessed = "meet";
+            if (s.Equals(WordTobeGuessed))
+            {
+                Console.WriteLine(s);
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("you entered a wrong word");
+                menu();
+                Console.ReadLine();
+             }
         }
         public static void menu()
         {
@@ -75,7 +83,7 @@ namespace WheelTest
                     case 2:
                         Console.WriteLine("Enter a Word:   ");
                         string s = Console.ReadLine();
-                        Wheel(s,result);
+                        Wheel(s);
                         break;
                     default:
                         break;
