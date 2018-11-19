@@ -8,7 +8,7 @@ namespace WheelTest
 {
     // wheel of fourtune 
     // this is done
-  // works
+  // does
     class Program
     {
         static void Main(string[] args)
